@@ -43,11 +43,62 @@ Section 5.1\\
     \item What is the probability that each die shows the 
     same value on the second roll as on the first roll? 
     \begin{solution}
-        
+        Since there are 36 possible outcomes for a single roll, 
+        there are 36 possible outcomes for two rolls to have the
+        same values. So, the probability that each die shows the 
+        same value on the second roll as on the first roll is 
+        $\dfrac{36}{1296} = 0.46\%$. 
     \end{solution}
     \item What is the probability that the sum of the 
-    two dice is the same on both rolls? 
+    two dice is the same on both rolls?
+    \begin{solution}
+        The possible sums are 2 to 12 (11 different outcomes). 
+        The possible outcomes for each sum are as following, 
+        1 to 6 for sums 2 to 7, and 5 to 1 for sums 8 to 12. 
+        So, if the sum of the two rolls are the same, the total
+        outcomes for a sum $x$ will be the number of outcomes
+        for that sum squared. For example, a sum of 7 has 6 
+        outcomes for one roll, so for two rolls to be 
+        equal, there are $6^2$ outcomes. If we sum up the outcomes 
+        for each sum, $1^2+2^2+...+6^2+5^2+...+1^2=146$. 
+        So, the probability that the sum of the two dice is 
+        the same on both rolls is $146/1296 = 11.3\%$. 
+    \end{solution} 
 \end{enumerate}
 
+30. How many times is the digit 5 written when listing all numbers
+from 1 to 100,000? Comment on the answers \textbf{(a)} 4, \textbf{(b)} 
+$5\times10^4$, and \textbf{(c)} 1 + 10 + 100 + 1000. 
+\begin{solution}
+    \textbf{(a)} I don't know how they got 4. A singular number 
+    55555 has five 5s, which is already greater than 4. \\
+    \textbf{(b)} This answer is correct. \\
+    \textbf{(c)} If we consider the number of numbers with 5 in 
+    the ones place, we can see by observation, that starting from 5, 
+    every 10 numbers will have a 5. Since there are 100,000 numbers, 
+    this means there are at least 10,000 numbers with at least one 
+    digit being 5. 
+\end{solution}
+
+36. If two different integers between 1 to 100 inclusive are chosen
+at random, what is the probability that the difference of the two 
+numbers is 15? 
+\begin{solution}
+    The minimum integer is 1 in the pair (1, 16) and the maximum is 
+    100 in the pair (85, 100). Then, we can see that there are 85 
+    pairs. There are $\binom{100}{2}=\frac{100!}{98!2!}=100\cdot99/2
+    =4950$ total ways to pick two different integers. So, the 
+    probability that two different integers chosen have a difference
+    of 15 is $85/4950 = 1.7\%$. 
+\end{solution}
+
+Section 5.2 \\
+8. There are nine white balls and four red balls in an urn. How
+many different ways are there to select a subset of six balls, 
+assuming the 13 balls are different? What is the fraction of 
+selections with four whites and two reds? 
+\begin{solution}
+    
+\end{solution}
 
 \end{document}
