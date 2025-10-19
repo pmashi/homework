@@ -1,0 +1,26 @@
+% --- solutionbox.tex ---
+\usepackage[many]{tcolorbox}
+
+\tcbuselibrary{skins, breakable}
+
+% Define the "solution" environment
+\newtcolorbox{solution}{
+  enhanced,
+  colback=black!3,
+  colframe=black!50,
+  boxrule=0.5pt,
+  arc=2mm,
+  left=5mm,
+  right=5mm,
+  top=2mm,
+  bottom=2mm,
+  fonttitle=\bfseries\sffamily,
+  title=Solution,
+  colbacktitle=black!10,
+  coltitle=black,
+  breakable,
+  before skip=2ex,
+  after skip=2ex,
+  before upper=\strut, 
+  detach title
+}

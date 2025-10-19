@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[
+    top=        2.5cm, 
+    bottom=     2.5cm, 
+    left=       2.5cm, 
+    right=      2.5cm
+]{geometry}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\input{../../problem.tex}
+\input{../../solution.tex}
+
+\begin{document}
+\noindent
+AMS 301\\
+Ma, Pei \\
+Set 6\\
+
+Sec 5.1: 16abc, 30, 36\\
+Sec 5.2: 8, 38, 54\\
+Sec 5.3: 6, 9, 15, 21, 22\\ 
+Sec 5.4: 2, 3ab, 7, 10, 11, 12, 48\\
+
+Section 5.1\\
+16. \begin{enumerate}[label=(\alph*)]
+    \item How many different outcomes are possible when 
+    a pair of dice, one red and one white, 
+    are rolled two successive times? 
+    \begin{solution}
+        Let $R = W = {1, 2, 3, 4, 5, 6}$ where $R$ is the set 
+        outcomes of rolling the red die and $W$ is of the white die.\\
+        Possible outcomes in one roll can be expressed as $R \times W$, 
+        and if we take the cardinality, $O=|R\times W| = |R| \times |W|
+        =6*6=36$, which is the number of possble outcomes in one roll.\\
+        The number of outcomes in two successive rolls will be 
+        $O\times O$, and the number of possible outcomes in two rolls 
+        is $|O\times O|=36*36 = 1296$. 
+    \end{solution}
+    \item What is the probability that each die shows the 
+    same value on the second roll as on the first roll? 
+    \begin{solution}
+        
+    \end{solution}
+    \item What is the probability that the sum of the 
+    two dice is the same on both rolls? 
+\end{enumerate}
+
+
+\end{document}
