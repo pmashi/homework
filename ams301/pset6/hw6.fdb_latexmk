@@ -1,9 +1,11 @@
 # Fdb version 4
-["pdflatex"] 1760860026.73571 "c:/Users/peima/OneDrive - Stony Brook University/Documents/GitHub/homework/ams301/pset6/hw6.tex" "hw6.pdf" "hw6" 1760860029.11053 0
+["pdflatex"] 1761068832.30796 "c:/Users/peima/OneDrive - Stony Brook University/Documents/GitHub/homework/ams301/pset6/hw6.tex" "hw6.pdf" "hw6" 1761068834.46656 0
   "../../problem.tex" 1760843324 814 dc386017f228e3cc99dccbd71fd1e209 ""
   "../../solution.tex" 1760843351 491 e7782db5b68f28985dc00a2e2ae38496 ""
   "C:/Users/peima/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760842372 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/peima/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1761068592 14064 dd18b1a8644728c5c21f9296cdb1e621 ""
   "C:/Users/peima/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757823628 13257343 b9a5a9caecb7d1858e80ee33450d12aa ""
+  "C:/Users/peima/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Users/peima/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/peima/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/peima/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -140,9 +142,9 @@
   "C:/Users/peima/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1749468414 7532 26d26e9d8f2ca784270d5da8ec7d102b ""
   "C:/Users/peima/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/peima/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/peima/OneDrive - Stony Brook University/Documents/GitHub/homework/ams301/pset6/hw6.tex" 1760860025 4168 6db06eae62cd3f88ee89186ba1da6e0a ""
-  "hw6.aux" 1760860028 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "hw6.tex" 1760860025 4168 6db06eae62cd3f88ee89186ba1da6e0a ""
+  "c:/Users/peima/OneDrive - Stony Brook University/Documents/GitHub/homework/ams301/pset6/hw6.tex" 1761068829 5313 e9275933bdf975625b2bbfba5445dcc0 ""
+  "hw6.aux" 1761068834 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "hw6.tex" 1761068829 5313 e9275933bdf975625b2bbfba5445dcc0 ""
   (generated)
   "hw6.aux"
   "hw6.log"
