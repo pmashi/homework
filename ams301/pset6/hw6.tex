@@ -38,7 +38,7 @@ Section 5.1\\
         =6*6=36$, which is the number of possble outcomes in one roll.\\
         The number of outcomes in two successive rolls will be 
         $O\times O$, and the number of possible outcomes in two rolls 
-        is $|O\times O|=36*36 = 1296$. 
+        is $|O\times O|=36\times36 = 1296$. 
     \end{solution}
     \item What is the probability that each die shows the 
     same value on the second roll as on the first roll? 
@@ -108,13 +108,54 @@ selections with four whites and two reds?
 including at least two of the first five questions. How many 
 subsets of five questions can be answered?
 \begin{solution}
-    There are $\binom{5}{2}=\dfrac{5!}{2!(5-2)!}=10$ ways to answer
-    two of the first five questions. Then, if we look a 
+    We require two of the first five questions to be chosen, but 
+    that does not limit only two of the five to be chosen. So, we must 
+    consider the following cases, 2, 3, 4, or 5 of the first five 
+    questions get answered. \\
+    Case 2: Choose 2 of the first 5, then choose 3 of the last 5. \\
+    Case 3: Choose 3 of the first 5, then choose 2 of the last 5. \\ 
+    Case 4: Choose 4 of the first 5, then choose 1 of the last 5. \\
+    Case 5: Choose 5 of the first 5. \\
+    $
+    \binom{5}{2}\binom{5}{3}
+    +\binom{5}{3}\binom{5}{2}
+    +\binom{5}{4}\binom{5}{1}
+    +\binom{5}{5}\binom{5}{0}
+    =2\cdot\dfrac{5!5!}{2!2!3!3!}
+    +\cdot\dfrac{5!5!}{1!1!4!4!}
+    +\cdot\dfrac{5!5!}{0!0!5!5!}
+    =200 + 25 + 1 = 226
+    $ subsets. 
+\end{solution}
+54. How many arrangements of MATHEMATICS are there in which each consonant
+is adjacent to a vowel?
+\begin{solution}
+    There are 4 vowels: A, E, A, I; and 7 consonants: M, T, H, M, T, C, S 
+    Let c denote consonant and v denote consonant. 
+    We can have the following forms: \\
+    cvc cvc cvc cv = \{1, 2, 2, 2, 0\} (x2 for symmetry)\\
+    cvc cvc cvc vc = \{1, 2, 2, 1, 1\} (x2 for symmetry)\\
+    cvc cvc vcc vc = \{1, 2, 1, 2, 1\}\\
+    And by symmetry and the rule that the ends in the 
+    set must be 1, we have 5 different forms. \\
+    The arrangements for the vowels is $\dfrac{4!}{2!}=12$ 
+    since we have 2 A's, and the arrangements for the 
+    consonants is $dfrac{7!}{2!2!}=1260$ since we have 2 M's 
+    and 2 T's. \\
+
+    So, there are a total of $5\times12\times1260=75600$ 
+    arrangements of MATHEMATICS where each consonant is 
+    adjacent to a vowel. 
 \end{solution}
 Section 5.3 \\
 6. If four identical dice are rolled, how many different outcomes can 
 be recorded?
 \begin{solution}
+    4 identical - xxxx : $\binom{6}{1} = 6$ \\
+    3 identical 1 random - xxxy : $\binom{6}{2} = 15$\\
+    2 identical 2 different - xxyz : $\binom{6}{3} = 20$\\
+    2 pairs of 2 identical - xxyy : $\binom{6}{2} = 15$\\
+    all different - wxzy : $\binom{6}{4} = 15$\\
     
 \end{solution}
 9. How many ways are there to pick a selection of coins from \$1 worth 
@@ -125,5 +166,17 @@ identical dimes if
 \begin{solution}
     There are 100 pennies, 20 nickels, and 10 dimes for selection. 
 \end{solution}
-
+15. How many 8-digit sequences are there involving exactly six 
+different digits?
+\begin{solution}
+    
+\end{solution}
+21. How many arrangements of the letters in MATHEMATICS are there in which
+TH appear together but the TH is not immediately followed by an E (not THE)?
+\begin{solution}
+    
+\end{solution}
+22. How many arrangements of the letters in PEPPERMILL are there with
+(a) The M appearing to the left of all the vowels?
+(b) The first P appearing before the first L?
 \end{document}
