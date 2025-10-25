@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.22)  24 OCT 2025 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.22)  24 OCT 2025 20:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -49,14 +49,9 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen155
 \Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks20
- (C:\Users\mapei\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\mapei\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
-Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip51
-\thanksmargin=\skip52
-\droptitle=\skip53
-) (C:\Users\mapei\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+ (C:\Users\mapei\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\mapei\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/06/16 v2.17y AMS math features
-\@mathmargin=\skip54
+\@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\mapei\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -113,8 +108,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \totwidth@=\dimen164
 \lineht@=\dimen165
 \@envbody=\toks24
-\multlinegap=\skip55
-\multlinetaggap=\skip56
+\multlinegap=\skip52
+\multlinetaggap=\skip53
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
@@ -129,7 +124,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (C:\Users\mapei\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip57
+\labelindent=\skip54
 \enit@outerparindent=\dimen166
 \enit@toks=\toks26
 \enit@inbox=\box55
@@ -138,8 +133,8 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 ) (../../problem.tex (C:\Users\mapei\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box56
-\beforetitleunit=\skip58
-\aftertitleunit=\skip59
+\beforetitleunit=\skip55
+\aftertitleunit=\skip56
 \ttl@plus=\dimen167
 \ttl@minus=\dimen168
 \ttl@toksa=\toks27
@@ -533,30 +528,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--145
 
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 153--159
+Underfull \hbox (badness 3302) in paragraph at lines 167--176
+\OT1/cmr/m/n/12 Assume, we have an un-lim-ited amount of each coin. Then, there are
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--176
 
  []
 
 
 
-[3] (hw6.aux)
+[3]
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 231--233
+
+ []
+
+
+
+[5]
+
+[6] (hw6.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19182 strings out of 468081
- 416791 string characters out of 5425788
- 836144 words of memory out of 5000000
- 47539 multiletter control sequences out of 15000+600000
+ 19125 strings out of 468081
+ 415879 string characters out of 5425788
+ 835372 words of memory out of 5000000
+ 47486 multiletter control sequences out of 15000+600000
  633010 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,7n,124p,498b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\mapei\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on hw6.pdf (3 pages, 82369 bytes).
+ <C:\Users\mapei\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mapei/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on hw6.pdf (6 pages, 112964 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

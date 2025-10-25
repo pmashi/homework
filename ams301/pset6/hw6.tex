@@ -6,7 +6,7 @@
     left=       2.5cm, 
     right=      2.5cm
 ]{geometry}
-\usepackage{titling}
+% \usepackage{titling}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{enumitem}
@@ -117,10 +117,10 @@ subsets of five questions can be answered?
     Case 4: Choose 4 of the first 5, then choose 1 of the last 5. \\
     Case 5: Choose 5 of the first 5. \\
     $
-    \binom{5}{2}\binom{5}{3}
-    +\binom{5}{3}\binom{5}{2}
-    +\binom{5}{4}\binom{5}{1}
-    +\binom{5}{5}\binom{5}{0}
+    \dbinom{5}{2}\dbinom{5}{3}
+    +\dbinom{5}{3}\dbinom{5}{2}
+    +\dbinom{5}{4}\dbinom{5}{1}
+    +\dbinom{5}{5}\dbinom{5}{0}
     =2\cdot\dfrac{5!5!}{2!2!3!3!}
     +\cdot\dfrac{5!5!}{1!1!4!4!}
     +\cdot\dfrac{5!5!}{0!0!5!5!}
@@ -140,7 +140,7 @@ is adjacent to a vowel?
     set must be 1, we have 5 different forms. \\
     The arrangements for the vowels is $\dfrac{4!}{2!}=12$ 
     since we have 2 A's, and the arrangements for the 
-    consonants is $dfrac{7!}{2!2!}=1260$ since we have 2 M's 
+    consonants is $\dfrac{7!}{2!2!}=1260$ since we have 2 M's 
     and 2 T's. \\
 
     So, there are a total of $5\times12\times1260=75600$ 
@@ -149,34 +149,155 @@ is adjacent to a vowel?
 \end{solution}
 Section 5.3 \\
 6. If four identical dice are rolled, how many different outcomes can 
-be recorded?
+be recorded?    
 \begin{solution}
-    4 identical - xxxx : $\binom{6}{1} = 6$ \\
-    3 identical 1 random - xxxy : $\binom{6}{2} = 15$\\
-    2 identical 2 different - xxyz : $\binom{6}{3} = 20$\\
-    2 pairs of 2 identical - xxyy : $\binom{6}{2} = 15$\\
-    all different - wxzy : $\binom{6}{4} = 15$\\
-    
+    There are 6 options and we need a combination of 4 numbers. \\
+    So the number of different outcomes is $\dbinom{6+4-1}{4}=126$. 
 \end{solution}
 9. How many ways are there to pick a selection of coins from \$1 worth 
 of identical pennies, \$1 worth of identical nickels, and \$1 worth of 
-identical dimes if
+identical dimes if\\
 (a) You select a total of 9 coins?
+\begin{solution}
+    There are 100 pennies, 20 nickels, and 10 dimes for selection. \\
+    $p + n + d = 9; \quad p\le100, n\le20, d\le10$. \\
+    $\dbinom{9+3-1}{9} = \dfrac{11!}{9!2!} = 55$ selections.
+\end{solution}
 (b) You select a total of 16 coins?
 \begin{solution}
-    There are 100 pennies, 20 nickels, and 10 dimes for selection. 
+    There are 100 pennies, 20 nickels, and 10 dimes for selection. \\
+    Assume, we have an unlimited amount of each coin. Then, there are 
+    $\dbinom{16+3-1}{16}=153$ different selections.\\
+    Now, if we consider the restriction of 10 dimes, we have to remove 
+    the additional selections where there are more than 10 dimes, hence
+    $p + n + (d-11) = 5$. $\binom{5+3-1}{5}=21$. So, there are 21 
+    selections where there are more than 10 dimes, which means there 
+    are 153-21=132 selections of 16 coins. \\
+
+    Comment on the answers: 
+    \begin{enumerate}[label=(\alph*)]
+        \item $\dbinom{16+3-1}{16}$\\
+        this solution does not consider the restriction. 
+        \item $\displaystyle \sum_{k=0}^{10}\dbinom{16}{k}
+        \dbinom{(16-k)+2-1}{(16-k)}$\\   
+        This answer does not make any sense. The sum appears to consider
+        the possibilities if there were k dimes. 
+        \item $\dbinom{16+3-1}{16}-\displaystyle\sum_{k=11}^{16}
+        \dbinom{16}{k}\dbinom{(16-k)+2-1}{(16-k)}$\\
+        $<\dbinom{18}{16} - \dbinom{16}{11}\dbinom{6}{5}=-26055$.
+        This solution is negative, which doesn't make sense. There cannot 
+        be a negative amount of selections. 
+    \end{enumerate}
 \end{solution}
 15. How many 8-digit sequences are there involving exactly six 
 different digits?
 \begin{solution}
-    
+    There are 10 different digits. You can have a triplet of a digit, or 
+    a two pairs of digits for repetitions. \\
+    For a triplet digit, 
+    there are $\dbinom{10}{6} = 210$ sets of digits, 
+    6 choices for the repeating digit,  
+    and $\dfrac{8!}{3!}=6720$ different sequences.\\
+    For the two pairs, 
+    there are $\dbinom{10}{6} = 210$ sets of digits, 
+    $\dbinom{6}{2}=15$ repeating pairs,  
+    and $\dfrac{8!}{2!2!}=10080$ sequences. \\
+    So there are a total of $210\times6\times6720 + 210\times15\times10080
+    = 42487200$
+    different sequences. 
 \end{solution}
 21. How many arrangements of the letters in MATHEMATICS are there in which
 TH appear together but the TH is not immediately followed by an E (not THE)?
 \begin{solution}
+    Consider "THE" as one character. Note that there are 2 copies of M, 
+    two copies of A, and two copies of T. 
+    So there are 2 ways to arrange "THE". There are 11 letters, but if 
+    "THE" is considered one letter, then there are $11-3+1=9$ letters. 
+    So, there must be $\dfrac{9!}{2!2!} = 90720$ arrangements where "THE"
+    are put 
+    together (We divide by $2!2!$ for the two copies of M and A). \\
+    Consider "TH" as one character, and the copy of T. Following the same
+    logic, there are 10 letter, so there must be $10!/2 = 907200$ 
+    arrangements. \\
+    So, there are $907200-90720=816480$ arrangements of the letters in MATHEMATICS 
+    which TH appear together, but not followed by an E. 
+\end{solution}
+22. How many arrangements of the letters in PEPPERMILL are there with \\
+(a) The M appearing to the left of all the vowels?
+\begin{solution}
+    There are 3 vowels. 
+\end{solution}
+(b) The first P appearing before the first L?
+\begin{solution}
+    There are 3 P's, 2 L's, and 10 total letters. \\
     
 \end{solution}
-22. How many arrangements of the letters in PEPPERMILL are there with
-(a) The M appearing to the left of all the vowels?
-(b) The first P appearing before the first L?
+Section 5.4 \\
+2. How many ways are there to distribute 18 different toys among four children?
+(a) Without restrictions?
+(b) If two children get seven toys and two children get two toys?
+\begin{solution}
+    
+\end{solution}
+3. In a bridge deal, what is the probability that:
+(a) West has four spades, two hearts, four diamonds, and three clubs?
+(b) North and South have four spades, West has three spades, and East has two
+spades?
+\begin{solution}
+    
+\end{solution}
+7. How many ways are there to arrange the letters in VISITING with no pair of
+consecutive Is?
+\begin{solution}
+    
+\end{solution}
+10. How many ways are there to arrange the 26 letters of the alphabet so that no pair
+of vowels appear consecutively (Y is considered a consonant)?
+\begin{solution}
+    
+\end{solution}
+11. If you flip a coin 18 times and get 14 heads and four tails, what is the probability
+that there is no pair of consecutive tails?
+\begin{solution}
+    We can rephrase this question to an arrangement of letters question, 
+    where H is heads and T is tails. Then, the arrangement 
+\end{solution}
+12. How many integer solutions are there to $x_1 + x_2 + x_3 + x_4 + x_5 
+= 31$ with 
+\begin{enumerate}[label=(\alph*)]
+    \item $x_i \ge 0$ 
+    \item $x_i > 0$ 
+    \item $x_i \ge i(i = 1, 2, 3, 4, 5)$
+\end{enumerate}
+\begin{solution}
+    
+\end{solution}
+48. How many arrangements of the letters in INSTRUCTOR have all of the
+following properties simultaneously?
+\begin{enumerate}[label=(\alph*)]
+    \item The vowels appearing in alphabetical order
+    \item At least 2 consonants between each vowel
+    \item Begin or end with the 2 Ts (the Ts are consecutive)
+\end{enumerate}
+\begin{solution}
+    There are a total of 10 letters, 3 are vowels (I, U, O) and 7 are 
+    consonants. \\
+    To satisfy the first condition, the order of the vowels must be: \\
+    $r_1,I, r_2, O, r_3, U, r_4$, where $r_i$ is a region of consonants. \\
+    The second condition requires that region $r_2$ and $r_3$ to consist 
+    of two characters. $r_1, I, c_1, c_2, O, c_3, c_4, U, r_4$. \\
+    The third condition requires either $r_1$ or $r_4$ to contain TT. So 
+    the forms are: \\
+    $T, T, I, c_1, c_2, O, c_3, c_4, U, r_4$ \\
+    $r_1, I, c_1, c_2, O, c_3, c_4, U, T, T$ \\
+    This leaves the final regions to be 1 character long, or 0, with 
+    another consonant adjacant to TT, either $cTT$ or $TTc$. \\
+    So, there must be $(\text{TT are at }r_1 \text{ or } r_4) \times 
+    (\text{c is(n't) with the TT }) = 2 \times 2 = 4$ 
+    forms. \\
+    Now, if we arrange the remaining consonants, there will be $5!=120$ 
+    permutations. Hence, there will be $120 \times 4 = 480$ arrangements 
+    of the letters in INSTRUCTOR with the properties. 
+\end{solution}
+
 \end{document}
