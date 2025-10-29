@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1761353875.25678 "c:/Users/mapei/Documents/Github/homework/ams301/pset6/hw6.tex" "hw6.pdf" "hw6" 1761353878.34818 0
+["pdflatex"] 1761364672.97869 "c:/Users/mapei/Documents/Github/homework/ams301/pset6/hw6.tex" "hw6.pdf" "hw6" 1761364675.79801 0
   "../../problem.tex" 1761274019 845 dc386017f228e3cc99dccbd71fd1e209 ""
   "../../solution.tex" 1761274019 491 e7782db5b68f28985dc00a2e2ae38496 ""
   "C:/Users/mapei/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1761274057 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -144,9 +144,9 @@
   "C:/Users/mapei/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1749468414 7532 26d26e9d8f2ca784270d5da8ec7d102b ""
   "C:/Users/mapei/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/mapei/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/mapei/Documents/Github/homework/ams301/pset6/hw6.tex" 1761353873 13201 5834050b137f11fb291959702ed5137b ""
-  "hw6.aux" 1761353877 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
-  "hw6.tex" 1761353873 13201 5834050b137f11fb291959702ed5137b ""
+  "c:/Users/mapei/Documents/Github/homework/ams301/pset6/hw6.tex" 1761364672 16175 8dbccd8fcc7117731714c7c0406aec15 ""
+  "hw6.aux" 1761364675 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
+  "hw6.tex" 1761364672 16175 8dbccd8fcc7117731714c7c0406aec15 ""
   (generated)
   "hw6.aux"
   "hw6.log"
