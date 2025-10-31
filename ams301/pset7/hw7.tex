@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[
+    top=        2.5cm, 
+    bottom=     2.5cm, 
+    left=       2.5cm, 
+    right=      2.5cm
+]{geometry}
+% \usepackage{titling}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\input{../../problem.tex}
+\input{../../solution.tex}
+
+\begin{document}
+\noindent
+AMS 301\\
+Ma, Pei \\
+Set 7\\
+
+Sec 5.4: 16, 19, 21, 22, 36, 38, 42c\\
+Sec 6.1: 2b, 4bc, 6, 8, 10, 16\\
+Sec 6.2: 2, 20, 22\\
+
+Section 5.4\\ 
+16. Consider the problem of distributing 10 distinct books among three 
+different people with each person getting at least one book. Explain why 
+the following solution strategy is wrong: first select a book to give to 
+the first person in 10 ways; then select a book to give to the second 
+person in nine ways; then select a book to give to the third person in 
+eight ways; and finally distribute the remaining seven books in $7^3$ ways.
+\begin{solution}
+    There are two issues with this method. \\
+    First, to distribute the remaining 7 books, there would be $3^7$ ways, 
+    as this is a cases of distributing 7 distinct objects to 3 different 
+    people. \\
+    Second, it does not account 
+    for repeating cases where the first book each person gets is repeated 
+    when distributing the remaining 7 books. For example, lets say person
+    1 gets book 1. Then, person 2 and 3 gets books 2 and 3 respectively. 
+    The final distribution is that person 1 gets 1, 4, 5, and 6. It does 
+    not matter what persons 2 or 3 gets. This 
+    distribution gets repeated if person 1 gets book 4 as their first book, 
+    then gets books 1, 5, and 6 when distribution the rest of the 7 books, 
+    and we assume persons 2 and 3 gets the same books to illustrate the 
+    case of repeating cases. 
+\end{solution}
+19. How many ways are there to distribute three different teddy bears and 
+nine identical lollipops to four children
+\begin{enumerate}[label=(\alph*)]
+    \item Without restriction?
+    \begin{solution}
+        Distribute 3 distinct objects to 4 children, so there are 
+        $4^3 = 64$ distributions. Then, to distribute 9 identical objects 
+        to 4 different children, there are 
+        $C(9+4-1, 9)=\frac{12!}{3!9!}=220$ 
+        distributions. So, there are a total of $64\times220 = 14080$ 
+        distributions.
+    \end{solution}
+    \item With no child getting two or more teddy bears?
+    \begin{solution}
+        We can only give a child at most 1 teddy bear, which implies 
+        that there will always be one child, so there will be 
+        $4*(3*2*1)=24$ distributions. Then, there are a total of 
+        $24\times220=5280$ distributions.  
+    \end{solution}
+    \item With each child getting three “goodies”?
+    \begin{solution}
+        We only need to distribute the distinct objects. So, there 
+        will be $4^3 = 64$ distributions. The way the lollipops are 
+        distributed is trivial since they're identical. 
+    \end{solution}
+\end{enumerate}
+21. Suppose a coin is tossed 12 times and there are three heads and nine 
+tails. How many such sequences are there in which there are at least 
+five tails in a row?
+\begin{solution}
+    Let can describe the scenarios with x being tails and $\vert$ being
+    heads. So, we can write xx$\vert$xxxxx$\vert$x$\vert$x. 
+    $x_1+x_2+x_3+x_4=9$ where one $x_i\ge5$ and that $x_i = z_i + 5$. 
+    $C(9-(5)+4-1, 4-1) = \frac{(9-5+4-1)!}{(7-4+1)!(4-1)!} = 35$. There 
+    are 4 sections that can have the sequence 
+    of 5 ore more tails, so the total distributions is $35\times4=140$. 
+\end{solution}
+22. How many binary sequences of length 20 are there that
+\begin{enumerate}[label=(\alph*)]
+    \item Start with a run of 0s—that is, a consecutive sequence of 
+    (at least) one 0— then a run of 1s, then a run of 0s, then a run 
+    of 1s, and finally finish with a run of 0s?
+    \begin{solution}
+        Each sequence will look like 0\_1\_0\_1\_0\_. We have to distribute
+        the remaining 15 digits into 5 boxes. $C(15+5-1, 5-1)=3876$ 
+        distributions. 
+    \end{solution}
+    \item Repeat part (a) with the constraint that each run is of length 
+    at least 2.
+    \begin{solution}
+        Each sequence will look like 00\_11\_00\_11\_00\_. We have to 
+        distribute the remaining 10 digits into 5 boxes. 
+        $C(10+5-1, 5-1) = 1001$ distributions. 
+    \end{solution}
+\end{enumerate}
+36. How many election outcomes in the race for class president are there 
+if there are five candidates and 40 students in the class and
+\begin{enumerate}[label=(\alph*)]
+    \item Every candidate receives at least two votes?
+    \begin{solution}
+        
+    \end{solution}
+    \item One candidate receives at most one vote and all the others receive at least
+    two votes?
+    \item No candidate receives a majority of the votes?
+    \item Exactly three candidates tie for the most votes?
+\end{enumerate}
+38. How many integer solutions are there to the equation $x_1 + x_2 + x_3 + x_4 \le 15$
+with $x_i \ge -10$?
+\begin{solution}
+    
+\end{solution}
+42. How many nonnegative integer solutions are there to 
+$x_1 + x_2 + \dots + x_5 = 20$\\
+(c) With $x_1=2x_2$
+\begin{solution}
+    
+\end{solution}
+Section 6.1\\
+2. Build a generating function for ar, the number of integer solutions 
+to the following equations:
+(b) $e_1 + e_2 + e_3 = r, 0 < e_i < 6$
+\begin{solution}
+    
+\end{solution}
+4. Build a generating function for ar, the number of distributions of r identical
+objects into
+(a) Five different boxes with at most three objects in each box
+(b) Three different boxes with between three and six objects in each box
+(c) Six different boxes with at least one object in each box
+(d) Three different boxes with at most five objects in the first box
+Section 6.2
+\end{document}
