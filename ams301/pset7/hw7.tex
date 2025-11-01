@@ -82,7 +82,7 @@ five tails in a row?
     $x_1+x_2+x_3+x_4=9$ where one $x_i\ge5$ and that $x_i = z_i + 5$. 
     $C(9-(5)+4-1, 4-1) = \frac{(9-5+4-1)!}{(7-4+1)!(4-1)!} = 35$. There 
     are 4 sections that can have the sequence 
-    of 5 ore more tails, so the total distributions is $35\times4=140$. 
+    of 5 or more tails, so the total sequences is $35\times4=140$. 
 \end{solution}
 22. How many binary sequences of length 20 are there that
 \begin{enumerate}[label=(\alph*)]
@@ -90,16 +90,16 @@ five tails in a row?
     (at least) one 0— then a run of 1s, then a run of 0s, then a run 
     of 1s, and finally finish with a run of 0s?
     \begin{solution}
-        Each sequence will look like 0\_1\_0\_1\_0\_. We have to distribute
-        the remaining 15 digits into 5 boxes. $C(15+5-1, 5-1)=3876$ 
-        distributions. 
+        Each sequence will look like 0\_1\_0\_1\_0\_. We have to 
+        distribute the remaining 15 digits into 5 boxes. 
+        $C(15+5-1, 5-1)=3876$ binary sequences. 
     \end{solution}
     \item Repeat part (a) with the constraint that each run is of length 
     at least 2.
     \begin{solution}
         Each sequence will look like 00\_11\_00\_11\_00\_. We have to 
         distribute the remaining 10 digits into 5 boxes. 
-        $C(10+5-1, 5-1) = 1001$ distributions. 
+        $C(10+5-1, 5-1) = 1001$ binary sequences. 
     \end{solution}
 \end{enumerate}
 36. How many election outcomes in the race for class president are there 
@@ -107,36 +107,203 @@ if there are five candidates and 40 students in the class and
 \begin{enumerate}[label=(\alph*)]
     \item Every candidate receives at least two votes?
     \begin{solution}
-        
+        Distribute two votes to every candidate, and now there are 
+        30 remaining undistributed votes. $C(30+5-1, 5-1)=46376$ 
+        election outcomes. 
     \end{solution}
-    \item One candidate receives at most one vote and all the others receive at least
-    two votes?
+    \item One candidate receives at most one vote and all the others 
+    receive at least two votes?
+    \begin{solution}
+        There are 5 possibilities of one candidate receiving at most one 
+        vote and the others receiving two. 
+        $5\times C(31+5-1, 5-1)=5\times52360=261800$
+    \end{solution}
     \item No candidate receives a majority of the votes?
+    \begin{solution}
+        For a candidate to get major vote, they must get more than 20 
+        votes. So, the distributions that a candidate gets majority 
+        of the votes is $5\times C(40-21 + 5 - 1, 40-21)=44275$ 
+        distributions. There are a total of $C(40 + 5-1, 40)=135751$ 
+        distributions. So, the total of distributions where no 
+        candidate receives a majority of the votes is $135751-8855=91476$.
+    \end{solution}
     \item Exactly three candidates tie for the most votes?
+    \begin{solution}
+        The way we distribution of the three candidates that get the most
+        votes is $C(5, 3) = 10$. \\
+        $x_1 + x_1 + x_1 + x_2 x_3 = 3x_1 + x_2 +x_3 = 40$, 
+        where $x_1 > x_2 \ge x_3 \ge 0$. If we set $3x_1 \le 40$, we get 
+        that $x_1 \le 13$. We can set $x_2 = x_3$ to find
+        the minimum $x_1$. $2x_2 = 40-3x_1$ If everyone tied, then each 
+        candidate would have 8 votes; this means the minimum $x_1$ must 
+        be is 9. Now, we can split each distribution of $x_1$ votes into 
+        cases. \\
+        Case 1: $x_1 = 9$ \\
+        $x_2 + x_3 = 40-3\times9 = 13$, but $x_2, x_3 < 9$. 
+        Consider $(x_2, x_3) = (8, 5)$, then there are 4 
+        distributions, where $x_2, x_3 \in (5, 8)$. \\
+        Case 2: $x_1 = 10$\\ 
+        $x_2 + x_3 = 10$ and $x_2, x_3 < 10$. There will be 9 
+        distributions. \\
+        Case 3: $x_1 = 11$\\
+        $x_2 + x_3 = 7$, and $x_2, x_3 < 11$ There will be $C(7+2-1, 7)=8$ 
+        distributions.\\ 
+        Case 4: $x_1 = 12$\\
+        $x_2 + x_3 = 4$, there are 5 distributions.\\
+        Case 5: $x_1 = 13$\\
+        $x_2 + x_3 = 1$, there are 2 distributions.\\
+        So, the total number of distributions where exactly three 
+        candidates tie for most votes is $10(4 + 9 + 8 + 5 + 2)=280$.
+    \end{solution}
 \end{enumerate}
-38. How many integer solutions are there to the equation $x_1 + x_2 + x_3 + x_4 \le 15$
+38. How many integer solutions are there to the equation $x_1 + x_2 + x_3 
++ x_4 \le 15$
 with $x_i \ge -10$?
 \begin{solution}
-    
+    $z_i = x_i + 10 \rightarrow x_i = z_i - 10$. $z_i - 10 \ge -10 
+    \rightarrow z_i \ge0$.
+    We get the equation, 
+    $z_1 + z_2 + z_3 + z_4 - 40 \le 15$ or 
+    $z_1 +\dots + z_4 =\le 55$. \\
+    We can change this to $z_1 + \dots + z_5 = 55$, where $z_5\ge0$. 
+    So, there will be $C(55+5-1, 55) = 455126$ integer solutions. 
 \end{solution}
 42. How many nonnegative integer solutions are there to 
 $x_1 + x_2 + \dots + x_5 = 20$\\
 (c) With $x_1=2x_2$
 \begin{solution}
-    
+    $3x_2 + x_3 + x_4 + x_5 = 20 \rightarrow x_3 + x_4 + x_5 = 20-3x_2$\\
+    So, $x_2 \in(0, 6)$. \\
+    The total number of solutions is 
+    $\sum_{x_2=0}^{6} C((20-3x_2) + 3 - 1, 3-1) = 672$ total solutions. 
 \end{solution}
 Section 6.1\\
-2. Build a generating function for ar, the number of integer solutions 
+2. Build a generating function for $a_r$, the number of integer solutions 
 to the following equations:
 (b) $e_1 + e_2 + e_3 = r, 0 < e_i < 6$
 \begin{solution}
-    
+    $1 \le e_i \le 5 \rightarrow g(x)=(x+x^2+x^3+x^4+x^5)^3$
 \end{solution}
-4. Build a generating function for ar, the number of distributions of r identical
-objects into
-(a) Five different boxes with at most three objects in each box
-(b) Three different boxes with between three and six objects in each box
-(c) Six different boxes with at least one object in each box
-(d) Three different boxes with at most five objects in the first box
-Section 6.2
+4. Build a generating function for $a_r$, the number of distributions of 
+$r$ identical objects into
+\begin{enumerate}[label=(\alph*)]
+    \setcounter{enumi}{1}
+    \item Three different boxes with between three and six objects in 
+    each box
+    \begin{solution}
+        $e_1 + e_2 + e_3 = r, 3 \le e_i \le 6$\\
+        $g(x) = (x^3 + x^4 + x^5 + x^6)^3$
+    \end{solution}
+    \item Six different boxes with at least one object in each box
+    \begin{solution}
+        $e_1 + \dots + e_6 = r, e_i \ge 1$\\
+        $g(x) = (x + x^2 + \dots )^6 = \dfrac{x^6}{(1-x)^6}$
+    \end{solution}
+\end{enumerate}
+6. Use a generating function for modeling the number of different 
+selections of $r$ hot dogs when there are four types of hot dogs.
+\begin{solution}
+    Let $e_1, e_2, e_3, e_4$ be the number of each type of hot dog 
+    selected. Then, we can write the equation $e_1 + e_2 + e_3 + e_4 
+    = r$, $e_i \ge0$.\\
+    $g(x) = (1+x+x^2+\dots)^4$
+    The number of ways to select $r$ hotdogs from 4 types is $C(r+4-1,r)$.
+\end{solution}
+8. 
+\begin{enumerate}[label=(\alph*)]
+    \item Use a generating function for modeling the number of 
+    different election outcomes in an election for class president 
+    if 25 students are voting among four candidates. 
+    Which coefficient do we want?
+    \begin{solution}
+        In a general case, there are a total of $r$ votes in the 
+        election amongst 4 candidates. So, we can write, 
+        $e_1+e_2+e_3+e_4 = r$, where $e_i \ge0$. Then, the generating
+        function is $g(x)=(1+x+x^2+\dots)^4$ \\
+        We want to coefficient for $x^{25}$. \\
+        $a_{25}=C(25+4-1, 4-1)=3276$.  
+    \end{solution}
+    \item Suppose each student who is a candidate votes for herself 
+    or himself. Now what is the generating function and the required 
+    coefficient?
+    \begin{solution}
+        $e_1+e_2+e_3+e_4=r$, where $e_i\ge 1$. \\
+        $g(x) = (x+x^2+\dots)^4$\\
+        We want the coefficient for $x^{21}$. $a_{21}=C(21+4-1,4-1)=2024$
+    \end{solution}
+    \item Suppose no candidate receives a majority of the vote. 
+    Repeat part (a).
+    \begin{solution}
+        Majority vote is if a candidate obtains 13 or more votes. 
+        Then, $e_i \le 12$ if no candidate recieves a majority of
+        the votes. \\
+        $g(x)=(1+x+x^2+\dots+x^{12})^4 = (\dfrac{1-x^{13}}{1-x})^4$\\
+        Suppose a candidate gets majority vote, then we have 
+        $e'_1+e_2+e_3+e_4=12$ where $e_1 = e'_1 + 13$. So, the
+        number of distributions where the candidate obtains majority 
+        vote is $C(12+4-1, 4-1)=455$ The coefficient of $x^25$ is 
+        $3276 - 4\times 455=1456$.  
+    \end{solution}
+\end{enumerate}
+10. Given one each of $u$ types of candy, two each of $v$ types of 
+candy, and three each of $w$ types of candy, find a generating 
+function for the number of ways to select $r$ candies.
+\begin{solution}
+    $g(x) = (1+ x)^u(1+x+x^2)^v(1+x+x^2+x^3)^w$
+\end{solution}
+16. Find a generating function for the number of integers between 
+0 and 999,999 whose sum of digits is r.
+\begin{solution}
+    $e_1 + e_2 + e_3 + e^4 + e^5 + e^6 = r$, $0\le e_i\le9$\\
+    $g(x)=(1+x+x^2+\dots+x^9)^6 = \dfrac{(1-x^{10})^6}{(1-x)^6}$
+\end{solution}
+Section 6.2\\
+2. Find the coefficient of $x^r$ in $(x^5 + x^6 + x^7 +\dots)^8$.
+\begin{solution}
+    $(x^5 +x^6 + x^7 +\dots) = [(x^5)(1+x+x^2+\dots)]^8
+    =x^{40}\dfrac{1}{(1-x)^8}$\\
+    $\dfrac{1}{(1-x)^n}= 1+C(1+n-1,1)x+C(2+n-1,2)x^2 +\dots + 
+    C(m+n-1,r)x^m + \dots$\\
+    $\dfrac{x^{40}}{(1-x)^8}= x^{40}+C(1+8-1,1)x^{41}+
+    C(2+8-1,2)x^{42} +\dots + C((r-40)+8-1,r)x^{m+40} + \dots$\\
+    The coefficient for $x^r$ for $r\ge 40$ is $C((r-40)+8-1,(r-40))$.
+\end{solution}
+20. How many ways are there to paint the 10 identical rooms in a 
+hotel with five colors if at most three rooms can be painted green, 
+at most three painted blue, at most three red, and no constraint 
+is laid on the other two colors, black and white?
+\begin{solution}
+    Max 3 green, 3 blue, 3 red, no constraint on black white. \\
+    $e_1 + e_2 + e_3 + e_4 + e_5 = r$, where $e_1, e_2, e_3 \le 3$.\\
+    $g(x)= (1+x+x^2+x^3)^3 \cdot (1+x+x^2+\dots)^2 =
+    \left(\dfrac{(1-x^4)^3}{(1-x)^5}\right) = \sum g_ix^i$\\
+    $(1-x^4)^3 = 1-C(3,1)x^4 + C(3, 2)x^8 + C(3, 3)x^{12}=\sum a_i x^i$\\
+    $\dfrac{1}{(1-x)^5} = 
+    1+\dots+
+    \binom{2+5-1}{2}x^2+\dots+
+    \binom{6+5-1}{6}x^6+\cdots + 
+    \binom{10+5-1}{10}x^{10}+\cdots=\sum b_i x^i$\\
+    $g_{10} = (a_0b_{10} + a_4b_6+a_8b_2) = 
+    1\cdot \binom{10+5-1}{10}-
+    \binom{3}{1}\cdot\binom{6+5-1}{6}+
+    \binom{3}{2}\cdot\binom{2+5-1}{2} = 416$
+\end{solution}
+22. How many ways are there to get a sum of 25 when 10 distinct 
+dice are rolled?
+\begin{solution}
+    $\sum_{i=1}^{10} e_i = r, 1 \le e_i\le 6$\\
+    $g(x) = (x+x^2+x^3+x^4+x^5+x^6)^{10}=x^{10}(1+x+\dots+x^5)^{10} = 
+    \dfrac{x^{10}(1-x^6)^{10}}{(1-x)^{10}}$\\
+    We need coefficient of $x^{15}$ in $\dfrac{(1-x^6)^{10}}{(1-x)^{10}}$. \\
+    $(1-x^6) = 1 - C(10, 1)x^6 + C(10, 2)x^{12} \pm\dots = \sum a_ix^i$\\
+    $\dfrac{1}{(1-x)^{10}} = $\\
+    $1+\cdots+ 
+    C(3+10-1,3)x^3 + \cdots +
+    C(9+10-1,9)x^9 + \cdots +
+    C(15+10-1, 15)x^{15} +\cdots = \sum b_ix^i$\\
+    ${g_15} = (a_0 b_{15} + a_6 b_9 + a_{12}b_3) = 
+    1\cdot\binom{15+10-1}{15} +
+    \binom{10}{1}\binom{9+10-1}{9} + 
+    \binom{10}{2}\binom{3+10-1}{3} = 831204$ ways. 
+\end{solution}
 \end{document}
