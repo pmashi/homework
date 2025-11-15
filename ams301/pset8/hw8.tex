@@ -1,0 +1,205 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[
+    top=        2.5cm, 
+    bottom=     2.5cm, 
+    left=       2.5cm, 
+    right=      2.5cm
+]{geometry}
+% \usepackage{titling}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\input{../../problem.tex}
+\input{../../solution.tex}
+
+\begin{document}
+\noindent
+AMS 301\\
+Ma, Pei \\
+Set 7\\
+
+Sec 7.1: 4, 6ab, 7, 11, 12, 15, 19, 28, 30\\
+Sec 7.3: 1 ,2, 3a\\
+
+Section 7.1\\
+4. 
+\begin{enumerate}[label=(\alph*)]
+\item Find a recurrence relation for the number of ways to go n miles by foot
+walking at 2 miles per hour or jogging at 4 miles per hour or running at 8 miles
+per hour; at the end of each hour a choice is made of how to go the next hour.
+\begin{solution}
+    $a_{n-2}+ a_{n-4} + a_{n-8} = a_n$\\
+    $a_0 = 1, a_i = 0$ for $i\le0$
+\end{solution}
+\item How many ways are there to go 12 miles. 
+\begin{solution}
+    $a_2 = a_0 + a_{-2} + a_{-6} = 1$\\
+    $a_4 = a_0 + a_2 + a_{-4} = 2$\\
+    $a_6 = a_4 + a_2 + a_{-2} = 2 + 1 = 3$\\
+    $a_8 = a_6 + a_4 + a_0 = 3 + 2 = 5$\\
+    $a_{10} = a_8 + a_6 + a_2 = 5 + 3 + 1 = 9$\\
+    $a_{12} = a_{10} + a_8 + a_4 = 9 + 5 + 2 = 16$
+\end{solution}
+\end{enumerate}
+
+6. 
+\begin{enumerate}[label=(\alph*)]
+\item Find a recurrence relation for the number of n-digit binary 
+sequences with no pair of consecutive 1s.
+\begin{solution}
+    $a_0 = 1, (\emptyset); a_1 = 2, (0, 1); a_2 = 3, (00, 01, 10); 
+    a_3 = 5,(000, 001, 010, 100, 101)$\\
+    $a_n = a_{n-1} + (n-1)$; \\
+    ($a_{n-1}$) represent adding a 0 to the end of 
+    each term in $a_{n-1}$ and $(n-1)$ represent $n-1$ 
+    possible terms in $n-1$ digit binary sequence that ends with 1. 
+\end{solution}
+\item Repeat for n-digit ternary sequences.
+\begin{solution}
+    $a_0 = 1, (\emptyset); a_1 = 3, (0, 1, 2); a_2 = 8,
+    (00, 01, 02, 10, 12, 20, 21, 22)$ \\
+    $a_n = 2\times a_{n-1} + (n-1)$ \\
+    Follows similar logic to the previous question, but since we have the 
+    option of adding a 0 or 2 to the end of all $n-1$ digit outcomes, we
+    have $2\times a_{n-1}$. 
+\end{solution}
+\end{enumerate}
+7. Find a recurrence relation for the number of pairs of rabbits after 
+$n$ months if (1) initially there is one pair of rabbits who were just 
+born, and (2) every month each pair of rabbits that are over one month 
+old have a pair of offspring (a male and a female).
+\begin{solution}
+    $a_0 = 1$ pair; $a_1 = 1$ pair\\
+    $a_n = a_{n-1} + a_{n-2}$
+\end{solution}
+11. Find a recurrence relation for an for the number of ways for an 
+image to be reflected $n$ times by internal faces of two adjacent panes 
+of glass. The diagram below shows that $a_0 = 1$, $a_1 = 2$, and 
+$a_2 = 3$.
+\begin{solution}
+    In the internal faces of two adjacent panes, there are 3 lines 
+    which the image can be reflected on. We can label them 0, 1, 2. 
+    It is possible to reflect under 0, above and under 1, and above 2. 
+    We assume the image to begin from above, making the only possible 
+    reflections to go from above. \\
+    For 0 reflections, there is only $a_0 = 1$ way for the image to be 
+    reflected, which is no ways. \\
+    For 1 reflection, the image can reflect
+    against line 1 and 2 from above, which is $a_1 = 1[1,above] + 
+    1[2,above] = 2$ ways. \\
+    For 2 reflections, we include the previous count, 2, which hits 
+    line 0 from below from line 2, and add 1 for the reflections which 
+    hits line 0 from below from line 1. \\
+    So, following similar logic, for $n$ reflections, there are 
+    $a_n = a_{n-1} + a_{n-2}$ reflections. 
+\end{solution}
+12. Find a recurrence relation for the number of regions created by $n$ 
+mutually intersecting circles on a piece of paper (no three circles 
+have a common intersection point).
+\begin{solution}
+    Let $a_n$ be the number of regions created by $n$ mutually 
+    interecting circles. $a_0 = 1$ region; $a_1 = 2$ region; $a_2 = 4$ 
+    intersections; $a_3 = 8$ intersections. \\
+    From a little bit of intuition, adding another intersection will 
+    create $2n$ the amount of regions and add an additional region. So, 
+    $a_n = a_{n-1} + 2(n-1)$ regions. 
+\end{solution}
+15. Find a recurrence relation for the amount of money in a savings 
+account after $n$ years if the interest rate is 6 percent and \$50 
+is added at the start of each year.
+\begin{solution}
+    $a_n = 1.06(a_{n-1} + 50)$ with initial balance  $a_0$. 
+\end{solution}
+19. 
+\begin{enumerate}[label=(\alph*)]
+\item Find a recurrence relation for the number of sequences of 
+1s, 3s, and 5s whose terms sum to n.
+\begin{solution}
+    $a_n = a_{n-1} + a_{n-3} + a_{n-5}$, with initial condition 
+    $a_0 = 1$. 
+\end{solution}
+\item Repeat part (a) with the added condition that no 5 can be 
+followed by a 1.
+\begin{solution}
+    Let $a_n = x_n + y_n$ where $x_n$ is the number of valid 
+    sequences where the last term is not 5 and $y_n$ is the 
+    number of valid sequences where the last term is 5. \\
+    For $x_n$, if the previous term ended with 1, then we have 
+    then the previous sequence must be $x_{n-1}$. \\
+    If the previous term ended with 3, then the previous sequence
+    is $x_{n-3} + y_{n-3}$ \\
+    So, we can write $x_n = x_{n-1} + (x_{n-3} + y_{n-3})$. \\
+    For $y_n$, it can follow any valid sequence summing to $n-5$, 
+    $y_n = x_{n-5} + y_{n-5}$.\\\\
+    If we combine both terms, \\
+    $a_n = x_{n-1} + (x_{n-3} + y_{n-3}) 
+    + (x_{n-5} + y_{n-5}) = x_{n-1} + a_{n-3} + a_{n-5}$.\\
+    $y_{n-1} = a_{n-6}$ \\
+    $x_{n-1} = a_{n-1} - y_{n-1} \rightarrow x_{n-1}
+    = a_{n-1} - a_{n-6}$. \\\\
+    So, the final recurrence relation is $a_n = a_{n-1}+a_{n-3}
+    +a_{n-5}-a_{n-6}$. 
+\end{solution}
+\item Repeat part (a) with the condition of no subsequence of 135.
+\begin{solution}
+    The subsequence 135 has a sum of 9. So, for any sequnce 
+    $0\le n<9$, no sequence is excluded. We can follow the same 
+    formula as in part (a) $a_n = a_{n-1}+a_{n-3}+a_{n-5}$. Then, 
+    we must remove the only possible sequence with a sum of 9 that 
+    includes the subsequence $135$, which is itself. This is 
+    done by $a_n = a_{n-1} + a_{n-3} + a_{n-5} - a_{n-9}$.
+\end{solution}
+\end{enumerate}
+28. Find a recurrence relation for the number of ways to pick $k$ 
+objects with repetition from $n$ types.
+\begin{solution}
+    $a_{n, 0} = 1$ for $n\ge0$, there is 1 way to pick 0 items from 
+    $n$ types.\\
+    $a_{0, k} = 0$, there are no ways to pick $k$ item from 0 types. \\
+    $a_{n, k} = a_{n-1,k} + a_{n, k-1}$\\
+    $a_{n-1, k}$ is how many ways to pick if there was one less type. 
+    If we add another type, we can just pick that 0 times. Now, we need 
+    to consider $a_{n, k-1}$ which is where we pick at least 1 object 
+    of type $n$ which is the new type. 
+\end{solution}
+30. Find a recurrence relation for $a_{n,k}$ , the number of ways 
+to order $n$ doughnuts from $k$ different types of doughnuts if two 
+or four or six doughnuts must be chosen of each type.
+\begin{solution}
+    $a_{0,0} = 1$\\ 
+    $a_{n,0} = 0$ for $n>0$ since you cannot have donuts 
+    if you are picking from none.\\
+    $a_{n, k} = 0$ for $n<2k$ since each type must contribute
+    two doughnuts. \\
+    $a_{n,k} = a_{n-2,k-1} + a_{n-4,k-1} + a_{n-6,k-1}$
+\end{solution}
+Section 7.3\\
+1. If \$500 is invested in a savings account earning $8$ percent a 
+year, give a formula for the amount of money in the account after 
+$n$ years.
+\begin{solution}
+    $a_n = 500\cdot1.08^n$
+\end{solution}
+2. Find and solve a recurrence relation for the number of $n$-digit 
+ternary sequences with no consecutive digits being equal.
+\begin{solution}
+    $a_n = 2a_{n-1}$ and $a_1=3$. $a_n = 3\cdot 2^{n-1}$
+\end{solution}
+3. Solve the following recurrence relations:
+\begin{enumerate}[label=(\alph*)]
+\item $a_n = 3a_{n-1} + 4a_{n-2}, a_0 = a_1 = 1$
+\begin{solution}
+    Get the characteristic equation: $r^2-3r-4=0$, which we can solve
+    and get $r=4, -1$. \\
+    $a_n= \alpha_1 \cdot 4^n + \alpha_2 \cdot (-1)^n$. \\
+    $a_0 = \alpha_1 + \alpha_2 = 1$ and 
+    $a_1 = \alpha_1 \cdot 4^1 + \alpha_2 \cdot (-1)^1 = 1$\\
+    We get $5\alpha_1 = 2 \rightarrow \alpha_1 = \frac{2}{5}$ and
+    $\alpha_2 = \frac{3}{5}$. \\
+    So, the recurrenc relation is equal to $a_n=\frac{2}{5}\cdot4^n + 
+    \frac{3}{5}\cdot(-1)^n$. 
+\end{solution}
+\end{enumerate}
+\end{document}
